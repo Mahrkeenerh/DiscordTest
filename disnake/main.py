@@ -4,8 +4,11 @@ from disnake.ext import commands
 intents = disnake.Intents.default()
 intents.members = True
 
-# bot = commands.Bot(command_prefix="!", test_guilds=[889176263992963142], intents=intents)
-bot = commands.Bot(command_prefix=commands.when_mentioned_or("!"), test_guilds=[889176263992963142])
+bot = commands.Bot(
+    command_prefix=commands.when_mentioned_or("!"), 
+    test_guilds=[889176263992963142], 
+    intents=intents
+)
 
 
 @bot.event
